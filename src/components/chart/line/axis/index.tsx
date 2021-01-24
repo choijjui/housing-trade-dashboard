@@ -15,12 +15,11 @@ function Axis({ yScale, width, margin }: Props) {
       axisLeft(yScale)
         .tickValues([0, 1, 2, 3, 4, 5])
         .tickSize(-width)
-        // .tickFormat(function (d, i) { return '' })
-    ).call((g) => g.select('.domain').remove());
+    ).call(g => g.select('.domain').remove());
 
-    d3Select(yAxis.current).selectAll(".tick line").attr("stroke", "#ececec");
+    d3Select(yAxis.current).selectAll('.tick line').attr('stroke', '#ececec');
 
-  }, [yAxis.current])
+  }, [yAxis.current]);
 
   return (
     <g
@@ -28,7 +27,7 @@ function Axis({ yScale, width, margin }: Props) {
       ref={yAxis}
       transform={`translate(${margin.left}, 0)`}
     />
-  )
+  );
 }
 
 export default Axis;

@@ -25,12 +25,12 @@ function lineChart() {
 
   const xScale:d3.ScaleBand<string> = d3
     .scaleBand()
-    .domain(data.map((d) => d.month))
+    .domain(data.map(d => d.month))
     .range([margin.left, width - margin.right]);
 
   const yScale:d3.ScaleLinear<number, number, never> = d3
     .scaleLinear()
-    .domain([0, d3.max(data, (d) => d.value)])
+    .domain([0, d3.max(data, d => d.value)])
     .nice()
     .range([height - margin.bottom, margin.top]);
 

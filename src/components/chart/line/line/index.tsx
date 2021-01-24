@@ -50,7 +50,7 @@ function Line({ data, xScale, yScale }: Props) {
         </g>
       ))}
     </>
-  )
+  );
 }
 
 export default Line;

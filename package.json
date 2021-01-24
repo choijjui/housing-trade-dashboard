@@ -13,6 +13,7 @@
     "@types/node": "^12.19.15",
     "@types/react": "^16.14.2",
     "@types/react-dom": "^16.9.10",
+    "@types/styled-components": "^5.1.7",
     "@typescript-eslint/eslint-plugin": "^4.5.0",
     "@typescript-eslint/parser": "^4.5.0",
     "babel-eslint": "^10.1.0",
@@ -102,6 +103,22 @@
   "babel": {
     "presets": [
       "react-app"
+    ],
+    "plugins": [
+      [
+        "styled-components"
+      ],
+      [
+        "babel-plugin-root-import",
+        {
+          "paths": [
+            {
+              "rootPathPrefix": "~",
+              "rootPathSuffix": "./src"
+            }
+          ]
+        }
+      ]
     ]
   },
   "eslintConfig": {

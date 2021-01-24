@@ -31,7 +31,7 @@ function TextComp({ data, xScale }) {
         </Text>
       ))}
     </g>
-  )
+  );
 }
 
 export default TextComp;
